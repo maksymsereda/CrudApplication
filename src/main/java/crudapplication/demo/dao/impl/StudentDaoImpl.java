@@ -11,12 +11,8 @@ import java.util.List;
 @Repository
 public class StudentDaoImpl implements StudentDao {
 
-    private final SessionFactory session;
-
     @Autowired
-    public StudentDaoImpl(SessionFactory session) {
-        this.session = session;
-    }
+    private SessionFactory session;
 
     @Override
     public void add(Student student) {
